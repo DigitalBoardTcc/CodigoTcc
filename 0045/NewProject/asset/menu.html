@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+   <!--<link rel="stylesheet" href="content.css">--> 
+    <title>Document</title>
+</head>
+<body>
+
+    <!--Menu hedear-->
+    <header id="header">
+        <!--Logo-->
+        <a id="logo" href="menu.html">Digital Board</a>
+        <!--Nav bar search bar-->
+        <div id="searchBox">
+            <input  type="text" placeholder="pesquisa...">
+            <!--Button Nav bar -->
+            <button type="submit">
+                <span><ion-icon name="search-outline"></ion-icon></span>
+            </button>
+        </div>
+        <!--Menu navBar anchor-->
+        <nav id="nav">
+            <!--Mobile button menu-->
+            <button id="btn-mobile">Menu
+                <span id="bars"></span>
+            </button>
+           
+            <ul id="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#serviços">Serviços</a></li>
+                <li class="registration"><a href="cadastro.html">Cadastrar</a></li>
+                <li class="login"><a href="login.html">Login</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+    <!--Ending Menu header-->
+
+    <!-- Contents Section-->
+    <section id="home" >
+
+     
+       
+        <section class="section1_content">
+          
+           
+            <div class="box1" data-aos="fade-left" data-aos-offset="400" data-aos-duration="1000">
+                
+                <h1><span class="tip1">Get new</span>opportunities</h1>
+                
+                <p>Fast food ou, em Portugal, também comida pronta, é o nome genérico dado ao consumo de refeições preparadas e servidas em um curto espaço de tempo.</p>
+                <a href="#">Lei mais...</a>
+            </div>
+            <div class="box2" data-aos="fade-right" data-aos-offset="400" data-aos-duration="1000">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRFLBTZh_mcgGDj7t9qge-XppGyN7DmPeGYg&usqp=CAU" alt="students">
+                <h1>FastFood:</h1>
+                <p>São comercializados, desta maneira, sanduíches, pizzas e pastéis, entre outros.</p>
+                <a href="#">Lei mais...</a>
+            </div>
+        </section>
+        <section class="container_content">
+
+            <div class="card1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxX24FWaARF7G0VHAtGZiRGqPFdu6dx6Tt4A&usqp=CAU" alt="">
+                <h1>O criador do fast-food no Brasil</h1>
+                <p>Conheça os números e as novidades do franchising    brasileiro     no portal institucional ABF.
+                Notícias, vídeos e a lista com todos os associados ABF
+                </p>
+            </div>
+            <div class="card2" >
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxX24FWaARF7G0VHAtGZiRGqPFdu6dx6Tt4A&usqp=CAU" alt="">
+                <h1>O criador do fast-food no Brasil</h1>
+                <p>Conheça os números e as novidades do franchising    brasileiro     no portal institucional ABF.
+                Notícias, vídeos e a lista com todos os associados ABF
+                </p>
+            </div>
+            <div class="card3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxX24FWaARF7G0VHAtGZiRGqPFdu6dx6Tt4A&usqp=CAU" alt="">
+                <h1>O criador do fast-food no Brasil</h1>
+                <p>Conheça os números e as novidades do franchising    brasileiro     no portal institucional ABF.
+                Notícias, vídeos e a lista com todos os associados ABF
+                </p>
+
+            </div>
+        </section>
+    </section>
+    <section id="sobre"></section>
+    <section id="serviços"></section>
+    <!--Final Contents Section-->
+
+    <!--Nav bars Fucntions to open and close-->
+    <script>
+
+        const btnMobile = document.getElementById('btn-mobile');
+
+        btnMobile.addEventListener('click', toggleMenu);
+
+        btnMobile.addEventListener('touchstart', toggleMenu);
+      
+        function toggleMenu(event){
+
+            if(event.type === 'touchstart')event.preventeDefault();
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+        }
+
+
+      
+
+    </script>
+
+    <script src="menu.js"></script>
+    <!--Library for icons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>

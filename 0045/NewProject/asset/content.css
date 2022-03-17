@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /*.....variveis globais....*/
+
+    :root{
+        --main-bg-color:#dddddddd;
+        --main-fontFamily: 'Cormorant Garamond', serif;
+        --main-title-h1:2rem;
+        --main-h1-size:5rem;
+        --main-fontSize_paragrafo:1.5rem;
+        --main-fontWeight:300;
+        --main-fontWeight-h1:600;
+        --main-fontTextWeight:300;
+        --main-color-text:#afafaf;
+        --main-border:1px solid #ff0000;
+        --main-borderShadow:0px 0px 0px 0px#000;
+    }
+    /* ....body....*/
+    body{
+        background:#ddd;
+    }
+    
+    /*....Header....*/
+
+    header{
+        text-align: center;
+        font-family: var(--main-fontFamily);
+        font-size: var(--main-h1-size);
+        font-weight: var(--main-fontWeight-h1);
+        border-bottom: var(--main-border);
+        box-shadow: var(--main-borderShadow);
+        color: #ffff00;
+       
+    }
+
+    /*....Header animation....*/
+    @keyframes blinker {
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+    }
+    /*....Conteudo....*/
+
+    .section1_content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+    }
+
+    /*....Coteudo h1....*/
+
+    .box1 h1{
+        font-size: var(--main-title-h1);
+        font-family: var(--main-fontFamily);
+        font-weight: var(--main-fontWeight-h1);
+    }
+    /*....Conteudo p....*/
+    .box1 p{
+        font-size: var(--main-fontSize_paragrafo);
+        font-weight: var( --main-fontTextWeight);
+        font-family: var(--main-fontFamily);
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    /*....Conteudo Span....*/
+    .text_title{
+        color:#ff0000;
+        animation: blinker 0.5s infinite linear;
+    }
+
+    /*.... Conteudo link ....*/
+    
+    a{
+        text-decoration: none;
+        font-size: var(--main-fontSize_paragrafo);
+        font-weight: var(--main-fontTextWeight);
+        color: #afafaf;
+    }
+
+    /*....container_content...*/
+
+    .container_content{
+        display: flex;
+        justify-content:space-around;
+        gap:50px;
+        max-width: 800px;
+        margin: 0 auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    .card1 h1,
+    .card2 h1, .card3{
+        font-family: var(--main-fontFamily);
+    }
+    .card1 p,
+    .card2 p,
+    .card3 p{
+        font-family: var(--main-fontFamily);
+        margin-top: 10px;
+    }
+    @media (max-width: 600px) {
+
+        .section1_content{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container_content{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        
+    }
+
